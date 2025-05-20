@@ -30,7 +30,7 @@
 
         <form action="{{ route('teachers.store') }}" method="POST" class="space-y-4">
             @csrf
-
+            
             <div>
                 <label for="name" class="block text-gray-700 font-medium">Teacher Name</label>
                 <input type="text" name="name"

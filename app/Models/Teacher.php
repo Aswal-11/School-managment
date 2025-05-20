@@ -37,6 +37,6 @@ class Teacher extends Model
      */
     public function schoolClasses()
     {
-        return $this->belongsToMany(SchoolClass::class);
+        return $this->belongsToMany(SchoolClass::class, 'school_teacher_related_classes', 'teacher_id', 'school_class_id');
     }
 }

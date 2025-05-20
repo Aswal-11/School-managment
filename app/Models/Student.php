@@ -43,8 +43,8 @@ class Student extends Model
         );
     }
 
-    public function teacher()
-    {
-        return $this->belongsToMany(Teacher::class, 'school_teacher_related_classes', 'school_class_id', 'teacher_id');
-    }
+    // public function teacher()
+    // {
+    //     return $this->belongsToMany(Teacher::class, 'school_teacher_related_classes', 'school_class_id', 'teacher_id');
+    // }
 }

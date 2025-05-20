@@ -65,7 +65,9 @@ class TeacherController extends Controller
         if ($input) {
             Session::flash('success', 'The teacher details are submittted successfully.');
 
-            Teacher::create($input);
+            $teachers = Teacher::create($input);
+
+            $teachers->schoolClasses()->attach($schoolClasses);
 
             return redirect()->route('teachers.create');
         } else {
